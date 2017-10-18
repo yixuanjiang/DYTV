@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "YXPageTitleView.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong)YXPageTitleView *pageTitleView;
 
 @end
 
@@ -20,6 +23,9 @@
     
     [self setupNavigationLeftBar];
     [self setupNavigationRightBar];
+    
+    self.pageTitleView = [[YXPageTitleView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 50) isScrollEnable:NO titles:@[@"标题",@"标题",@"标题",@"标题"]];
+    [self.view addSubview:self.pageTitleView];
 }
 
 - (void)setupNavigationLeftBar

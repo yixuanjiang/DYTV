@@ -15,6 +15,7 @@
 		4447A3A61F8F491D0022AD2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4447A3A41F8F491D0022AD2A /* LaunchScreen.storyboard */; };
 		4447A3B11F8F491E0022AD2A /* DOZBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4447A3B01F8F491E0022AD2A /* DOZBTests.m */; };
 		4447A3BC1F8F491E0022AD2A /* DOZBUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4447A3BB1F8F491E0022AD2A /* DOZBUITests.m */; };
+		4447A3EF1F9482ED0022AD2A /* YXPageTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4447A3EE1F9482ED0022AD2A /* YXPageTitleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		4447A3B71F8F491E0022AD2A /* DOZBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DOZBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4447A3BB1F8F491E0022AD2A /* DOZBUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOZBUITests.m; sourceTree = "<group>"; };
 		4447A3BD1F8F491E0022AD2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4447A3ED1F9482ED0022AD2A /* YXPageTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXPageTitleView.h; sourceTree = "<group>"; };
+		4447A3EE1F9482ED0022AD2A /* YXPageTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXPageTitleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +166,7 @@
 			children = (
 				4447A39C1F8F491D0022AD2A /* ViewController.h */,
 				4447A39D1F8F491D0022AD2A /* ViewController.m */,
+				4447A3EC1F9482CA0022AD2A /* YXPageTitleView */,
 			);
 			name = "Home(首页)";
 			sourceTree = "<group>";
@@ -186,6 +190,15 @@
 			children = (
 			);
 			name = "Tools(工具)";
+			sourceTree = "<group>";
+		};
+		4447A3EC1F9482CA0022AD2A /* YXPageTitleView */ = {
+			isa = PBXGroup;
+			children = (
+				4447A3ED1F9482ED0022AD2A /* YXPageTitleView.h */,
+				4447A3EE1F9482ED0022AD2A /* YXPageTitleView.m */,
+			);
+			name = YXPageTitleView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +340,7 @@
 				4447A39E1F8F491D0022AD2A /* ViewController.m in Sources */,
 				4447A39B1F8F491D0022AD2A /* AppDelegate.m in Sources */,
 				4447A3981F8F491D0022AD2A /* main.m in Sources */,
+				4447A3EF1F9482ED0022AD2A /* YXPageTitleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
