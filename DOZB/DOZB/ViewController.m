@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import "YXPageTitleView.h"
 
+#define isIPhoneX ([UIScreen mainScreen].bounds.size.height==812)
+#define NavigationBarHeight isIPhoneX ? 44 + 44 : 64 // 适配iPhoneX
+
 @interface ViewController ()
 
 @property (nonatomic, strong)YXPageTitleView *pageTitleView;
@@ -24,7 +27,9 @@
     [self setupNavigationLeftBar];
     [self setupNavigationRightBar];
     
-    self.pageTitleView = [[YXPageTitleView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 50) isScrollEnable:NO titles:@[@"标题",@"标题",@"标题",@"标题"]];
+    //必要的设置, 如果没有设置可能导致内容显示不正常
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.pageTitleView = [[YXPageTitleView alloc] initWithFrame:CGRectMake(0, NavigationBarHeight, self.view.frame.size.width, 50) isScrollEnable:NO titles:@[@"标题",@"标题",@"标题",@"标题"]];
     [self.view addSubview:self.pageTitleView];
 }
 

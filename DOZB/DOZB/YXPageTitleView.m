@@ -13,6 +13,8 @@
 #define kNormalTitleColor [UIColor grayColor]
 #define kTitleMargin 10
 
+
+
 @interface YXPageTitleView ()
 
 /***   标签文本数组   */
@@ -41,6 +43,8 @@
 - (instancetype)initWithFrame:(CGRect)frame isScrollEnable:(BOOL)isScrollEnable titles:(NSArray *)titles
 {
     if ([super initWithFrame:frame]) {
+        
+        //self.backgroundColor = [UIColor grayColor];
         self.isScrollEnable = isScrollEnable;
         self.titles = [NSArray arrayWithArray:titles];
         /***   设置UI界面
@@ -53,9 +57,9 @@
         self.scrollView.showsHorizontalScrollIndicator = NO;
         //self.scrollView.scrollsToTop = NO;
         //self.scrollView.bounces = NO;
-        self.scrollView.backgroundColor = [UIColor greenColor];
+        //self.scrollView.backgroundColor = [UIColor greenColor];
         //设置滚动范围
-        self.scrollView.contentSize = CGSizeMake(self.frame.size.width, 0);
+        self.scrollView.contentSize = CGSizeMake(frame.size.width, 0);
         
         self.scrollLine = [[UIView alloc] init];
         self.scrollLine.backgroundColor = kSelectTitleColor;
@@ -114,17 +118,33 @@
         label.userInteractionEnabled = YES;
         UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(titleLabelClick)];
         [label addGestureRecognizer:tapGes];
+        [self.titleLabels addObject:label];
     }
+    
 }
 
 - (void)setupBottomlineAndScrollline{
     // 1.添加bottomline
     UIView *bottomline = [[UIView alloc] init];
     bottomline.frame = CGRectMake(0, self.frame.size.height - 0.5, self.frame.size.width, 0.5);
+    bottomline.backgroundColor = [UIColor lightGrayColor];
     [self addSubview:bottomline];
     
     // 2.设置滑块的view
     [self addSubview:self.scrollLine];
+    UILabel *firstLabel = self.titleLabels[0];
+    /*
+    CGSize size = CGSizeMake(MAXFLOAT, 50.0f);
+    CGSize buttonSize = [firstLabel.text boundingRectWithSize:size
+                                              options:NSStringDrawingTruncatesLastVisibleLine  | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+                                           attributes:@{ NSFontAttributeName:firstLabel.font}
+                                              context:nil].size;
+    */
+    CGFloat lineX = firstLabel.frame.origin.x;
+    CGFloat lineY = self.bounds.size.height - kScrollLineH;
+    CGFloat lineW = firstLabel.frame.size.width;
+    CGFloat lineH = kScrollLineH;
+    self.scrollLine.frame = CGRectMake(lineX, lineY, lineW, lineH);
 
 }
 

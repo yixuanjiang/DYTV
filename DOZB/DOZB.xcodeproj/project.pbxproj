@@ -167,6 +167,7 @@
 				4447A39C1F8F491D0022AD2A /* ViewController.h */,
 				4447A39D1F8F491D0022AD2A /* ViewController.m */,
 				4447A3EC1F9482CA0022AD2A /* YXPageTitleView */,
+				44B906D31FD8DA02004FD627 /* YXPageCotentView */,
 			);
 			name = "Home(首页)";
 			sourceTree = "<group>";
@@ -199,6 +200,13 @@
 				4447A3EE1F9482ED0022AD2A /* YXPageTitleView.m */,
 			);
 			name = YXPageTitleView;
+			sourceTree = "<group>";
+		};
+		44B906D31FD8DA02004FD627 /* YXPageCotentView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = YXPageCotentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
